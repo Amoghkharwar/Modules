@@ -1,0 +1,14 @@
+<div class="container" (submit)="onformSubmit($event)">
+    <form action="ui form"> 
+      <div class="ui card" style="margin: 10px auto; width: 70rem;">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search countries..." autofocus
+        #input (input)="term=input.value">
+        <i class="search icon"></i>
+        <!-- <button (click)="dekh()"></button>  button to check the user in console input-->
+        <!-- <button (click)="dekh()"></button> -->
+      </div>
+      <div class="results"></div>
+    </div></form>
+  </div>
+  

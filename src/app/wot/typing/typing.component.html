@@ -1,0 +1,21 @@
+<div class="container" style="margin: 10rem auto;">
+    <div class="card shadow-lg p-5 mb-5 bg-body-tertiary rounded border border-primary-subtle" style="width: 28rem; margin: auto; margin: top 50px auto;">
+        <div class="card-body">
+          <h5 class="card-title" class="text-primary text-center">Typing Master</h5>
+          <p class="card-text text-center">
+            <span *ngFor="let letter of myText.split(''); let vada = index;" [ngClass]="compare(letter,enteredText[vada])">
+                {{letter}}
+            </span>
+          </p>
+          <input type="text" class="form-control" placeholder="" aria-label="Enter length" aria-describedby="addon-wrapping"
+          #input (keyup)="onInput(input.value)">
+        </div>
+        <div class="text" style="color: white; background: green;">
+          <div *ngIf="myText==enteredText" class="text-center">
+            <span>Success</span>
+          </div>
+        </div>
+        
+      </div>
+    
+</div>

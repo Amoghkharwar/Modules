@@ -1,0 +1,29 @@
+
+<table class="ui celled table">
+    <thead>
+      <tr>
+      <th>Title</th>
+      <th>Word Count</th>
+      <th>Descriptions</th>
+      </tr>
+    </thead>
+    <!-- <tbody *ngFor="let page of pageAria">
+      <tr>
+        <td>{{page.title}}</td>
+        <td>{{page.wordcount}}</td>
+        <td [innerHTML]="page.snippet"></td>
+         innerhtml used becoz to remove the element from text [innerHTML] -> this format know as binding -->
+        <!-- <td>{{page.snippet}}</td> -->
+      <!-- </tr>  -->
+    
+    <!-- </tbody> -->
+    <tbody >
+        <tr *ngFor="let page of pageAria">
+            <td>{{page.title}}</td>
+            <td>{{page.wordcount}}</td>
+            <td [innerHTML]="page.snippet"></td>
+           
+            
+        </tr>
+    </tbody>
+  </table>

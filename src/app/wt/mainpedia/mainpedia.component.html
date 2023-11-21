@@ -1,0 +1,6 @@
+<div class="container">
+    <!-- <app-searchbar></app-searchbar>
+    <app-pagelist></app-pagelist> -->
+    <app-searchbar (emitter)="onemit($event)"></app-searchbar>
+    <app-pagelist *ngIf="pages.length"[pageAria]="pages"></app-pagelist>
+</div>

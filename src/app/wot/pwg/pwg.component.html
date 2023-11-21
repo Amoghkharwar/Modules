@@ -1,0 +1,51 @@
+ <div class="container " style=" margin: 10rem auto; "  >
+  <span class=></span>
+
+    <div class="card shadow-lg p-5 mb-5 bg-body-tertiary rounded border border-primary-subtle" style="width: 28rem; margin-bottom: 3; margin: auto;" >
+      <div class="card-body"  >
+       <h3 class="text-primary text-center">Password generator</h3>
+       <div class="input-group flex-nowrap">
+        <!-- <span class="input-group-text" id="addon-wrapping">$</span> -->
+        <input type="text" class="form-control" placeholder="Enter length" aria-label="Enter length" aria-describedby="addon-wrapping"
+        #vada (keyup)="getLength(vada.value)">
+      </div>
+      <div class="container-fluid">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="infy" (change)="includeNumber()">
+          <label class="form-check-label" for="infy" >
+           Include char
+          </label>
+        </div>
+        <div class="form-check" >
+          <input class="form-check-input" type="checkbox" value="" id="insy" (change)="includeChar()"  >
+          <label class="form-check-label" for="insy"  >
+            Include Number
+            
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="inty" (change)="includeSymbol()">
+          <label class="form-check-label" for="inty">
+           Include symbol
+          </label>
+        </div>
+        
+      </div>
+    
+      
+      </div>
+      <input class="btn btn-primary mb-3" style="margin: 10px;;" type="submit" value="Submit" [disabled]="!passLength" (click)="genPass()">
+      <!-- <div>
+        {{generatePass}}
+      </div> -->
+  
+      <div class="container" *ngIf="generatePass" style="margin: auto; margin-bottom: 10px;">
+        <input type="text" class="form-control" placeholder="Generate Pass" aria-label="Enter length" aria-describedby="addon-wrapping"
+        value="{{generatePass}}">
+      </div>
+    
+  
+    </div>
+  </div>
+
+ 
